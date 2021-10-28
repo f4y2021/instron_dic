@@ -1,8 +1,5 @@
 import streamlit as st
 
-import os
-os.chdir("C:/dataset")
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
