@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Input Parameters
-
-# In[1]:
-
-
 import streamlit as st
 
 import os
@@ -244,11 +236,3 @@ if run_button:
         st.subheader('Poissons Ratio = ' + str(abs(round(poisson_variable.slope,4))))
         st.balloons()
     wb.save('Tabela_Final_'+str(sample_name)+'.xlsx')
-    
-
-
-# In[ ]:
-
-
-
-
