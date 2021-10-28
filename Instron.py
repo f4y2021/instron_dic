@@ -16,11 +16,11 @@ st.title('Instron and DIC File Converter')
 
 sample_name = st.text_input("Sample Name")
 
-gauge_length = st.number_input("Gauge Length",0)
+gauge_length = st.number_input("Gauge Length [mm]",0)
 
-width = st.slider("Sample Width",0,50)
+width = st.slider("Sample Width [mm]",0,50)
 
-thickness = st.slider("Sample Thickness",0,10)
+thickness = st.slider("Sample Thickness [mm]",0,10)
 
 
 #True or False LayOut
@@ -102,7 +102,10 @@ if run_button:
     print('The Poisson\'s Ratio is ' + str(abs(round(poisson_variable.slope,4))))
 
     st.dataframe(tabela_final)
-
+    
+    st.write('Young\'s Modulus = '+ str(round(young_variable.slope/1000,4))+' GPa')
+    st.write('Poisson\'s Ratio = ' + str(abs(round(poisson_variable.slope,4))))
+    
     fig = px.scatter(tabela_final, x='Eyy', y='Tensile Stress', marginal_y="box",
            marginal_x="box",template="ggplot2")
     fig.update_layout(
@@ -126,6 +129,7 @@ if run_button:
     from openpyxl.styles import colors
     from openpyxl.styles.borders import Border, Side
     from openpyxl.cell import Cell
+    from openpyxl.writer.excel import save_virtual_workbook
 
     from openpyxl.chart import (
         LineChart,
@@ -228,8 +232,7 @@ if run_button:
         c1.width = 30
 
         sheet.add_chart(c1, 'H14')
-        st.subheader('Young\'s Modulus = '+ str(round(young_variable.slope/1000,4))+' GPa')
-        st.subheader('Poissons Ratio = ' + str(abs(round(poisson_variable.slope,4))))
+        
         st.balloons()
-    wb.save('Tabela_Final_'+str(sample_name)+'.xlsx')
-    st.download_button("Download Final Excel File",wb)
+    streamtest = save_virtual_workbook(wb)
+    st.download_button("Download Final Excel File",streamtest,'Tabela_Final_'+str(sample_name)+'.xlsx')
