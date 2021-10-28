@@ -11,7 +11,6 @@ from plotly.subplots import make_subplots
 import re
 import sys
 
-#Preencher de acordo com as amostras em análise
 st.image('logo_inegi_big.png')
 st.title('Instron and DIC File Converter')
 
@@ -233,3 +232,4 @@ if run_button:
         st.subheader('Poissons Ratio = ' + str(abs(round(poisson_variable.slope,4))))
         st.balloons()
     wb.save('Tabela_Final_'+str(sample_name)+'.xlsx')
+    st.download_button("Download Final Excel File",wb)
