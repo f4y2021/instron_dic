@@ -13,20 +13,20 @@ import sys
 st.image('logo_inegi_big.png')
 st.title('Instron and DIC File Converter')
 
-sample_name = st.sidebar.selectbox('Sample Name',('Irurena', '10XL', 'Curve Works','INEGI'))
+sample_name = st.selectbox('Sample Name',('Irurena', '10XL', 'Curve Works','INEGI'))
 
-gauge_length = st.sidebar.number_input("Gauge Length [mm]",0)
+gauge_length = st.number_input("Gauge Length [mm]",0)
 
-width = st.sidebar.slider("Sample Width [mm]",0,50)
+width = st.slider("Sample Width [mm]",0,50)
 
-thickness = st.sidebar.slider("Sample Thickness [mm]",0,10)
+thickness = st.slider("Sample Thickness [mm]",0,10)
 
 
 #True or False LayOut
 st.sidebar.write("Output Excel File Print Options")
-logo_f4y = st.sidebar.checkbox("FIBRE4YARDS Logo")
-logo_inegi = st.sidebar.checkbox("INEGI Logo")
-plot_grafico = st.sidebar.checkbox("Plot Gráfico Stress / Strain (%)")
+logo_f4y = st.sidebar.checkbox("FIBRE4YARDS Logo",True)
+logo_inegi = st.sidebar.checkbox("INEGI Logo",True)
+plot_grafico = st.sidebar.checkbox("Plot Gráfico Stress / Strain (%)",True)
 
 '----------------------------------------------------------------------------------------------------'
 
