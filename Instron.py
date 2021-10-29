@@ -13,7 +13,7 @@ import sys
 st.image('logo_inegi_big.png')
 st.title('Instron and DIC File Converter')
 
-sample_name = st.selectbox('Sample Name',('Irurena', '10XL', 'Curve Works','INEGI'),0)
+sample_name = st.text_input('Sample Name')
 
 gauge_length = st.number_input("Gauge Length [mm]",0)
 
