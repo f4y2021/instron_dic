@@ -23,10 +23,16 @@ thickness = st.slider("Sample Thickness [mm]",0,10)
 
 
 #True or False LayOut
-st.sidebar.write("Output Excel File Print Options")
-logo_f4y = st.sidebar.checkbox("FIBRE4YARDS Logo",True)
-logo_inegi = st.sidebar.checkbox("INEGI Logo",True)
-plot_grafico = st.sidebar.checkbox("Plot Gráfico Stress / Strain (%)",True)
+st.write("Output Excel File Print Options")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    logo_f4y = st.checkbox("FIBRE4YARDS Logo",True)
+with col2:
+    logo_inegi = st.checkbox("INEGI Logo",True)
+with col3:    
+    plot_grafico = st.checkbox("Plot Gráfico Stress / Strain (%)",True)
 
 '----------------------------------------------------------------------------------------------------'
 
