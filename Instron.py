@@ -32,7 +32,7 @@ with col1:
 with col2:
     logo_inegi = st.checkbox("INEGI Logo",True)
 with col3:    
-    plot_grafico = st.checkbox("Plot Gráfico Stress / Strain (%)",True)
+    plot_grafico = st.checkbox("Plot Stress / Strain (%)",True)
 
 '----------------------------------------------------------------------------------------------------'
 
