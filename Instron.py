@@ -80,7 +80,7 @@ if run_button:
 
     from scipy import stats
 
-    #Definir intervalos para Eyy onde será calculos os declives e consequentemente os valores de Young Modulus e Poisson's Ratio
+    #Definir intervalos para Eyy onde serão calculados os declives e consequentemente os valores de Young's Modulus e Poisson's Ratio
 
     youngs_lower_bond = 0.0005 #Valor de Acordo com a Norma. Verificar!
     youngs_upper_bond = 0.0025 #Valor de Acordo com a Norma. Verificar!
