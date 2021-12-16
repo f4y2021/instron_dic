@@ -17,9 +17,9 @@ sample_name = st.text_input('Sample Name and Number')
 
 gauge_length = st.number_input("Gauge Length [mm]",0)
 
-width = st.number_input("Sample Width [mm]",0,50,float)
+width = st.number_input("Sample Width [mm]",0,50,step=1.,format="%.2f")
 
-thickness = st.number_input("Sample Thickness [mm]",0,10,float)
+thickness = st.number_input("Sample Thickness [mm]",0,10,step=1.,format="%.2f")
 
 
 #True or False LayOut
