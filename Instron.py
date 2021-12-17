@@ -17,9 +17,9 @@ sample_name = st.text_input('Sample Name and Number')
 
 gauge_length = st.number_input("Gauge Length [mm]",0)
 
-width = st.number_input("Sample Width [mm]",min_value=0.0,max_value=10.0,step=1e-3,format="%.2f")
+width = st.number_input("Sample Width [mm]",min_value=0.0,max_value=50.0,step=1e-3,format="%.2f")
 
-thickness = st.number_input("Sample Thickness [mm]",min_value=0.0,max_value=50.0,step=1e-3,format="%.2f")
+thickness = st.number_input("Sample Thickness [mm]",min_value=0.0,max_value=10.0,step=1e-3,format="%.2f")
 
 #True or False LayOut
 st.write("Output Excel File Print Options")
