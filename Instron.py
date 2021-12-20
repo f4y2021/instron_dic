@@ -24,11 +24,11 @@ thickness = st.number_input("Sample Thickness [mm]",min_value=0.0,max_value=10.0
 colunas12,colunas22 = st.columns(2)
 
 with colunas12:
-    st.header("Young\'s Modulus")
+    st.subheader("Young\'s Modulus")
     youngs_lower_bond = st.number_input("Young\'s Modulus Lower Bond",min_value=0.0000,max_value=0.5000,value=0.0005,step=1e-5,format="%.4f")
     youngs_upper_bond = st.number_input("Young\'s Modulus Upper Bond",min_value=0.0000,max_value=0.5000,value=0.0025,step=1e-5,format="%.4f")
 with colunas22:
-    st.header("Poisson\'s Ratio")
+    st.subheader("Poisson\'s Ratio")
     poisson_lower_bond = st.number_input("Poisson\'s Ratio Lower Bond",min_value=0.0000,max_value=0.5000,value=0.003,step=1e-5,format="%.4f")
     poisson_upper_bond = st.number_input("Poisson\'s Ratio Upper Bond",min_value=0.0000,max_value=0.5000,value=0.015,step=1e-5,format="%.4f")
 
