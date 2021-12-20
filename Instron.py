@@ -21,6 +21,15 @@ width = st.number_input("Sample Width [mm]",min_value=0.0,max_value=50.0,step=1e
 
 thickness = st.number_input("Sample Thickness [mm]",min_value=0.0,max_value=10.0,step=1e-3,format="%.2f")
 
+colunas12,colunas22 = st.columns(2)
+
+with colunas12:
+    youngs_lower_bond = st.number_input("Young\'s Modulus Lower Bond",min_value=0.0000,max_value=0.5000,value=0.0005,step=1e-5,format="%.4f")
+    youngs_upper_bond = st.number_input("Young\'s Modulus Upper Bond",min_value=0.0000,max_value=0.5000,value=0.0025,step=1e-5,format="%.4f")
+with colunas22:    
+    poisson_lower_bond = st.number_input("Poisson\'s Ratio Lower Bond",min_value=0.0000,max_value=0.5000,value=0.003,step=1e-5,format="%.4f")
+    poisson_upper_bond = st.number_input("Poisson\'s Ratio Upper Bond",min_value=0.0000,max_value=0.5000,value=0.015,step=1e-5,format="%.4f")
+
 #True or False LayOut
 st.write("Output Excel File Print Options")
 
@@ -86,10 +95,6 @@ if run_button:
     #poisson_lower_bond = 0.003 #Valor de Acordo com a Norma. Verificar!
     #poisson_upper_bond = 0.015 #Valor de Acordo com a Norma. Verificar!
     
-    youngs_lower_bond = st.number_input("Young\'s Modulus Lower Bond",min_value=0.0000,max_value=0.5000,value=0.0005,step=1e-5,format="%.4f")
-    youngs_upper_bond = st.number_input("Young\'s Modulus Upper Bond",min_value=0.0000,max_value=0.5000,value=0.0025,step=1e-5,format="%.4f")
-    poisson_lower_bond = st.number_input("Poisson\'s Ratio Lower Bond",min_value=0.0000,max_value=0.5000,value=0.003,step=1e-5,format="%.4f")
-    poisson_upper_bond = st.number_input("Poisson\'s Ratio Upper Bond",min_value=0.0000,max_value=0.5000,value=0.015,step=1e-5,format="%.4f")
 
     #Cálculo Young's Modulus
     tabela_young_modulus=tabela_final.loc[(tabela_final['Eyy']>= youngs_lower_bond) & (tabela_final['Eyy']< youngs_upper_bond)
