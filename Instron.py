@@ -54,7 +54,7 @@ area = width * thickness #mm^2
 instron_file_ref=st.file_uploader("Choose INSTRON CSV file")
 dic_file_ref=st.file_uploader("Choose DIC CSV file")
 
-run_button=st.button("Run")
+run_button=st.button(st.title("Run"))
 
 if run_button:
 
