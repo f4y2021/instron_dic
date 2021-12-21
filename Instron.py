@@ -25,7 +25,6 @@ with st.expander("Change Chord Modulus Calculation Strain Ranges"):
 
     colunas12,colunas22,colunas32 = st.columns(3)
 
-
     with colunas12:
         st.caption("Young\'s Modulus")
         youngs_lower_bond = st.number_input("Young\'s Modulus Lower Bond",min_value=0.0000,max_value=0.5000,value=0.0005,step=1e-4,format="%.4f")
