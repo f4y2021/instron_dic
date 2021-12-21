@@ -25,12 +25,12 @@ colunas12,colunas22,colunas32 = st.columns(3)
 
 with colunas12:
     st.header("Young\'s Modulus")
-    youngs_lower_bond = st.number_input("Young\'s Modulus Lower Bond",min_value=0.0000,max_value=0.5000,value=0.0005,step=1e-5,format="%.4f")
-    youngs_upper_bond = st.number_input("Young\'s Modulus Upper Bond",min_value=0.0000,max_value=0.5000,value=0.0025,step=1e-5,format="%.4f")
+    youngs_lower_bond = st.number_input("Young\'s Modulus Lower Bond",min_value=0.0000,max_value=0.5000,value=0.0005,step=1e-4,format="%.4f")
+    youngs_upper_bond = st.number_input("Young\'s Modulus Upper Bond",min_value=0.0000,max_value=0.5000,value=0.0025,step=1e-4,format="%.4f")
 with colunas32:
     st.header("Poisson\'s Ratio")
-    poisson_lower_bond = st.number_input("Poisson\'s Ratio Lower Bond",min_value=0.0000,max_value=0.5000,value=0.003,step=1e-5,format="%.4f")
-    poisson_upper_bond = st.number_input("Poisson\'s Ratio Upper Bond",min_value=0.0000,max_value=0.5000,value=0.015,step=1e-5,format="%.4f")
+    poisson_lower_bond = st.number_input("Poisson\'s Ratio Lower Bond",min_value=0.0000,max_value=0.5000,value=0.003,step=1e-4,format="%.4f")
+    poisson_upper_bond = st.number_input("Poisson\'s Ratio Upper Bond",min_value=0.0000,max_value=0.5000,value=0.015,step=1e-4,format="%.4f")
 
 #True or False LayOut
 st.write("Output Excel File Print Options")
