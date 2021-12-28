@@ -266,8 +266,6 @@ if run_button:
 st.markdown('##')
 st.markdown('##')
 st.markdown('##')
-st.markdown('##')
-st.markdown('##')
 
 with st.expander("License"):
     st.text("""THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
