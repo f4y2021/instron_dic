@@ -264,6 +264,11 @@ if run_button:
     st.download_button("Download Final Excel File",streamtest,'Tabela_Final_'+str(sample_name)+'.xlsx')
 
 st.markdown('##')
+st.markdown('##')
+st.markdown('##')
+st.markdown('##')
+st.markdown('##')
+
 with st.expander("License"):
     st.text("""THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
