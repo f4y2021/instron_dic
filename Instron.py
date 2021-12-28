@@ -10,6 +10,8 @@ from plotly.subplots import make_subplots
 import re
 import sys
 
+st.set_page_config(page_title="Instron DIC Processing",page_icon="📐")
+
 st.image('logo_inegi_big.png')
 st.title('Instron and DIC File Converter')
 
@@ -273,8 +275,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.""")
-    
-st.set_page_config(page_title="Instron DIC Processing",page_icon="📐")
-
-    
-
