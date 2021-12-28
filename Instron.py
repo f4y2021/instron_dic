@@ -256,7 +256,7 @@ if run_button:
     streamtest = save_virtual_workbook(wb)
     st.download_button("Download Final Excel File",streamtest,'Tabela_Final_'+str(sample_name)+'.xlsx')
 
-
+st.empty()
 with st.expander("License"):
     st.text("""Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
