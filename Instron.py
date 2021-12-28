@@ -12,10 +12,12 @@ import sys
 
 st.set_page_config(page_title="Instron & DIC",page_icon="⏩")
 
-st.markdown(""" div.stButton > button:first-child {
-background-color: #00cc00;color:white;font-size:20px;height:3em;width:30em;border-radius:10px 10px 10px 10px;
+m = st.markdown("""
+<style>
+div.stButton > button:first-child {
+    background-color: rgb(204, 49, 49);
 }
-""", unsafe_allow_html=True)
+</style>""", unsafe_allow_html=True)
 
 st.image('logo_inegi_big.png')
 st.title('Instron and DIC File Converter')
