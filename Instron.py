@@ -15,7 +15,7 @@ st.set_page_config(page_title="Instron & DIC",page_icon="⏩")
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    font-size:16px;height:2em;width:7em;
+    font-size:16px;font-weight:bold;height:2em;width:7em;
 }
 </style>""", unsafe_allow_html=True)
 
