@@ -73,9 +73,9 @@ if run_button:
         return df1_instron
 
     def arranjar_dic (dic_csv_file): #Function - Input: Ficheiro RAW do DIC; Output: DataFrame Organizado DIC
-
-        df1_dic = pd.read_csv(dic_csv_file,sep=",",usecols= [1,2], names=["Exx","Eyy"],header=1)
-
+        nomedascolunas=["Exx", "Eyy"] 
+        df1_dic = pd.read_csv(dic_csv_file,sep=",",usecols= ["exx [1] - Lagrange","eyy [1] - Lagrange"],header=1)
+        df1_dic.columns=nomedascolunas
         df1_dic = df1_dic.dropna(axis=0)
 
         return df1_dic
