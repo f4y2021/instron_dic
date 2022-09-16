@@ -29,7 +29,7 @@ div.stButton > button:first-child {
 st.image('logo_inegi_big.png')
 st.title('Instron and DIC File Converter')
 
-st.write("Instron & DIC Procedure to follow [Link](https://inegiuppt-my.sharepoint.com/:w:/g/personal/dcardoso_inegi_up_pt/EXSYXf4q_fRBlltb6uXLQKsBcQT2lPHlp3zaNF1FVn90Lg)")
+st.write("[Instron & DIC Guidelines](https://inegiuppt-my.sharepoint.com/:w:/g/personal/dcardoso_inegi_up_pt/EXSYXf4q_fRBlltb6uXLQKsBcQT2lPHlp3zaNF1FVn90Lg)")
 
 sample_name = st.text_input('Sample Name and Number')
 
