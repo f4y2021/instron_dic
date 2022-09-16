@@ -29,6 +29,8 @@ div.stButton > button:first-child {
 st.image('logo_inegi_big.png')
 st.title('Instron and DIC File Converter')
 
+st.write("Instron & DIC Procedure to follow [Link](https://inegiuppt-my.sharepoint.com/:w:/g/personal/dcardoso_inegi_up_pt/EXSYXf4q_fRBlltb6uXLQKsBcQT2lPHlp3zaNF1FVn90Lg)")
+
 sample_name = st.text_input('Sample Name and Number')
 
 gauge_length = st.number_input("Gauge Length [mm]",0)
@@ -96,7 +98,7 @@ if run_button:
     dic=arranjar_dic(dic_file_ref)
 
     tabela_final=agrupar_final(instron,dic)
-
+    tabela_final['Force']=tabela_final['Force']*1000 #Converter Force de kN para N
     tabela_final['Tensile Stress']=tabela_final['Force']/area # Cálculo Tensile Stress
     tabela_final['Deformation']=tabela_final['Displacement']/gauge_length # Cálculo Deformation
 
