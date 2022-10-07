@@ -39,6 +39,8 @@ width = st.number_input("Sample Width [mm]",min_value=0.0,max_value=50.0,step=1e
 
 thickness = st.number_input("Sample Thickness [mm]",min_value=0.0,max_value=10.0,step=1e-3,format="%.2f")
 
+check_force = st.checkbox("My Force is in kN",False)
+
 
 with st.expander("Change Chord Modulus Calculation Strain Ranges"):
 
@@ -100,6 +102,9 @@ if run_button:
     dic=arranjar_dic(dic_file_ref)
 
     tabela_final=agrupar_final(instron,dic)
+    
+    if check_force
+        tabela_final['Force']=tabela_final['Force']*1000 # Transformar força em KN se a opçcao estive selecionada
             
     tabela_final['Tensile Stress']=tabela_final['Force']/area # Cálculo Tensile Stress
     tabela_final['Deformation']=tabela_final['Displacement']/gauge_length # Cálculo Deformation
