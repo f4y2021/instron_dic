@@ -69,8 +69,8 @@ with col3:
 
 area = width * thickness #mm^2
 
-instron_file_ref=st.file_uploader("Choose INSTRON CSV file")
-st.write("Force in N | Displacement in mm")
+instron_file_ref=st.file_uploader("Choose INSTRON CSV file  | Force in N & Displacement in mm")
+
 dic_file_ref=st.file_uploader("Choose DIC CSV file")
 
 run_button=st.button("Run")
