@@ -71,7 +71,7 @@ with col3:
 
 area = width * thickness #mm^2
 
-instron_file_ref=st.file_uploader("Choose INSTRON CSV file  | Force acoording to selection & Displacement in mm")
+instron_file_ref=st.file_uploader("Choose INSTRON CSV file  | Force according to selection & Displacement in mm")
 
 dic_file_ref=st.file_uploader("Choose DIC CSV file")
 
