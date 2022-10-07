@@ -103,8 +103,8 @@ if run_button:
 
     tabela_final=agrupar_final(instron,dic)
     
-    if check_force
-        tabela_final['Force']=tabela_final['Force']*1000 # Transformar força em KN se a opçcao estive selecionada
+    if check_force:
+        tabela_final['Force']=tabela_final['Force']/1000 # Transformar força em kN se a opçcao estive selecionada
             
     tabela_final['Tensile Stress']=tabela_final['Force']/area # Cálculo Tensile Stress
     tabela_final['Deformation']=tabela_final['Displacement']/gauge_length # Cálculo Deformation
