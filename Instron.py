@@ -264,7 +264,7 @@ if run_button:
         s1.marker.graphicalProperties.line.solidFill = "04939e" # Alterar cor
         s1.graphicalProperties.line.noFill = True  # Esconder Linhas
         c1.style = 1
-        c1.x_axis.title = 'Strain (%)'
+        c1.x_axis.title = 'Strain'
         c1.y_axis.title = 'Tensile Stress (MPa)'
         c1.y_axis.majorGridlines = None
         c1.x_axis.majorGridlines = None
