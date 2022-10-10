@@ -255,7 +255,7 @@ if run_button:
 
         xvalues = Reference(sheet, min_col=7, min_row=11, max_row=sheet.max_row)
         values = Reference(sheet, min_col=4, min_row=11, max_row=sheet.max_row)
-        series = Series(values, xvalues, title_from_data=False)
+        series = Series(values, xvalues, title_from_data=True)
         c1.series.append(series)
 
         s1 = c1.series[0]
