@@ -81,7 +81,7 @@ if run_button:
 
     def arranjar_instron (instron_csv_file):#Function - Input: Ficheiro RAW da Instron / Atenção ao nome das Colunas (!!); Output: DataFrame Organizado Instron
 
-        df1_instron = pd.read_csv(instron_csv_file,sep=",",usecols= [1,2], names=["Displacement","Force"],header=6)
+        df1_instron = pd.read_csv(instron_csv_file,sep=",",usecols= [2,3], names=["Displacement","Force"],header=6)
 
         return df1_instron
 
@@ -116,7 +116,7 @@ if run_button:
 
     tabela_final=tabela_final[cols] #Reordenar colunas
 
-    print(tabela_final)
+    #print(tabela_final)
 
     from scipy import stats
 
