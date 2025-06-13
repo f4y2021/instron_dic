@@ -116,7 +116,7 @@ if run_button:
 
     tabela_final=tabela_final[cols] #Reordenar colunas
 
-    #print(tabela_final)
+    print(tabela_final)
 
     from scipy import stats
 
