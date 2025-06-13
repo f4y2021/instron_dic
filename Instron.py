@@ -108,6 +108,8 @@ if run_button:
             
     tabela_final['Force'] = pd.to_numeric(tabela_final['Force'], errors='coerce')
     tabela_final['Tensile Stress']=tabela_final['Force']/area # Cálculo Tensile Stress
+    tabela_final['Displacement'] = pd.to_numeric(tabela_final['Displacement'], errors='coerce')
+
     tabela_final['Deformation']=tabela_final['Displacement']/gauge_length # Cálculo Deformation
 
     cols=['Displacement','Force','Tensile Stress','Deformation','Exx','Eyy'] #Reordenar colunas
