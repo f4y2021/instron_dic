@@ -106,6 +106,7 @@ if run_button:
     if check_force:
         tabela_final['Force']=tabela_final['Force']*1000 # Transformar força de kN para N caso a opçao estiver selecionada
             
+    tabela_final['Force'] = pd.to_numeric(tabela_final['Force'], errors='coerce')
     tabela_final['Tensile Stress']=tabela_final['Force']/area # Cálculo Tensile Stress
     tabela_final['Deformation']=tabela_final['Displacement']/gauge_length # Cálculo Deformation
 
