@@ -79,9 +79,21 @@ run_button=st.button("Run")
 
 if run_button:
 
-    def arranjar_instron (instron_csv_file):#Function - Input: Ficheiro RAW da Instron / Atenção ao nome das Colunas (!!); Output: DataFrame Organizado Instron
+    def arranjar_instron(instron_csv_file):
+        
+        df1_instron = pd.read_csv(
+            instron_csv_file,
+            sep=",",
+            usecols=[2, 3],
+            names=["Displacement", "Force"],
+            header=4,
+            decimal=".",
+            na_values=["", " ", "NA", "N/A", "--"],
+        )
 
-        df1_instron = pd.read_csv(instron_csv_file,sep=",",usecols= [2,3], names=["Displacement","Force"],header=6)
+        # Convert to float explicitly, coercing errors to NaN
+        df1_instron["Displacement"] = pd.to_numeric(df1_instron["Displacement"], errors="coerce")
+        df1_instron["Force"] = pd.to_numeric(df1_instron["Force"], errors="coerce")
 
         return df1_instron
 
