@@ -91,10 +91,6 @@ if run_button:
             na_values=["", " ", "NA", "N/A", "--"],
         )
 
-        # Convert to float explicitly, coercing errors to NaN
-        df1_instron["Displacement"] = pd.to_numeric(df1_instron["Displacement"], errors="coerce")
-        df1_instron["Force"] = pd.to_numeric(df1_instron["Force"], errors="coerce")
-
         return df1_instron
 
     def arranjar_dic (dic_csv_file): #Function - Input: Ficheiro RAW do DIC; Output: DataFrame Organizado DIC
