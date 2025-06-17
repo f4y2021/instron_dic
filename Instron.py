@@ -84,7 +84,7 @@ if run_button:
         df1_instron = pd.read_csv(
             instron_csv_file,
             sep=",",
-            usecols=[2, 3],
+            usecols=[1, 2],
             names=["Displacement", "Force"],
             header=4,
             decimal=".",
